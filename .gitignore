@@ -11,6 +11,8 @@
 *.sln.docstates
 
 Vst3Pont/
+Vst3Pont/.DS_Store
+
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
