@@ -365,3 +365,6 @@ MigrationBackup/
 FodyWeavers.xsd
 /Vst3Pont/Vst3Pont.vcxproj
 /Vst3Pont/Vst3Pont.vcxproj.filters
+/Vst3Pont/resource.h
+/Vst3Pont/Resource.rc
+/Vst3Pont/resource1.h
