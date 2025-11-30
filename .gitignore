@@ -363,3 +363,5 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/Vst3Pont/Vst3Pont.vcxproj
+/Vst3Pont/Vst3Pont.vcxproj.filters
