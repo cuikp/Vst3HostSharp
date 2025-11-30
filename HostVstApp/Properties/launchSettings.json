@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "HostVstApp": {
+      "commandName": "Project",
+      "nativeDebugging": true
+    }
+  }
+}

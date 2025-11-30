@@ -1,0 +1,13 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:HostVstApp.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:views="clr-namespace:HostVstApp.Views" MinWidth="750" Width="1100" MinHeight="600"
+        mc:Ignorable="d" d:DesignWidth="1100" d:DesignHeight="1000" Height="1000"
+        x:Class="HostVstApp.Views.MainWindow" WindowStartupLocation="CenterScreen" 
+        Icon="/Assets/avalonia-logo.ico"
+        DataContext="{Binding myMVM}"
+        Title="{Binding TitleText}">
+        <views:MainView />
+</Window>

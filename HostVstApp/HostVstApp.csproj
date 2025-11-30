@@ -1,0 +1,79 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<LangVersion>latest</LangVersion>
+		<PlatformTarget>AnyCPU</PlatformTarget>
+		<Platforms>AnyCPU;x64</Platforms>
+		<AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+	</PropertyGroup>
+
+
+	<ItemGroup>
+		<AvaloniaResource Include="Assets\**" />
+	</ItemGroup>
+
+
+	<ItemGroup>
+		<AvaloniaResource Remove="Assets\bass solo_95bpm_8bars.mp3" />
+	</ItemGroup>
+
+
+	<ItemGroup>
+		<None Remove="Assets\bass solo_95bpm_8bars.mp3" />
+		<None Remove="libsndfile-1.dll" />
+		<None Remove="PortAudio.dll" />
+		<None Remove="sndfile.dll" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Content Include="Assets\bass solo_95bpm_8bars.mp3">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="libsndfile-1.dll">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Avalonia" Version="11.3.1" />
+		<PackageReference Include="Avalonia.Controls.DataGrid" Version="11.3.1" />
+		<PackageReference Include="Avalonia.Controls.ItemsRepeater" Version="11.1.5" />
+		<PackageReference Include="Avalonia.Skia" Version="11.3.1" />
+		<PackageReference Include="Avalonia.Svg.Skia" Version="11.3.0" />
+		<PackageReference Include="Avalonia.Themes.Fluent" Version="11.3.1" />
+		<PackageReference Include="Avalonia.Fonts.Inter" Version="11.3.1" />
+		<PackageReference Include="Avalonia.ReactiveUI" Version="11.3.1" />
+		<!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
+		<PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="11.3.1" />
+		<PackageReference Include="libsndfile.NET8" Version="1.1.10" />
+		<PackageReference Include="PortAudioSharp7" Version="1.0.66" />
+		<!--<PackageReference Include="SkiaSharp.NativeAssets.Win32" Version="2.88.8" />-->
+		<PackageReference Include="System.Configuration.ConfigurationManager" Version="9.0.6" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\Vst3HostSharp\Vst3HostSharp.csproj" />
+	</ItemGroup>
+
+
+	<ItemGroup>
+		<Compile Update="Settings.Designer.cs">
+			<DesignTimeSharedInput>True</DesignTimeSharedInput>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>Settings.settings</DependentUpon>
+		</Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+	
+		<None Update="Settings.settings">
+			<Generator>SettingsSingleFileGenerator</Generator>
+			<LastGenOutput>Settings.Designer.cs</LastGenOutput>
+		</None>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="libs\Win\" />
+	</ItemGroup>
+</Project>

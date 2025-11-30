@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Vst3HostSharp": {
+      "commandName": "Project",
+      "nativeDebugging": true
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "HostVstApp.Desktop": {
+      "commandName": "Project",
+      "nativeDebugging": true
+    }
+  }
+}

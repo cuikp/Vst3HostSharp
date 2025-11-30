@@ -1,0 +1,10 @@
+<!-- Directory.Build.props (local only) -->
+<Project>
+  <PropertyGroup>
+  		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<PackageOutputPath>D:\PROG\LocalNuget\Vst3HostSharp</PackageOutputPath>
+		<PackageReleaseNotes>added probe plugin C#</PackageReleaseNotes>
+	  <PackageReadmeFile>readme.md</PackageReadmeFile>
+  </PropertyGroup>
+</Project>
+

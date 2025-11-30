@@ -1,0 +1,31 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+        mc:Ignorable="d" d:DesignWidth="150" d:DesignHeight="250" Padding="30, 30, 30, 15" WindowStartupLocation="CenterOwner" Foreground="Black"
+        x:Class="MsgBox.MessageBox" SizeToContent="WidthAndHeight" Background="Gainsboro" MaxWidth="350" CanResize="False"  ShowInTaskbar="False" Title="" Topmost="True" >
+	
+	<StackPanel HorizontalAlignment="Center">
+		
+		<!--<TextBlock HorizontalAlignment="Center" TextWrapping="WrapWithOverflow" Name="Text" Margin="5"/>-->
+		<TextBlock HorizontalAlignment="Center" TextAlignment="Center" TextWrapping="Wrap" Name="Text" Margin="5"/>
+		
+		<StackPanel HorizontalAlignment="Center" Orientation="Horizontal" Name="Buttons" Margin="10" >
+			<StackPanel.Styles>
+				<Style Selector="Button">
+					<Setter Property="Margin" Value="10, 20, 10, 5"/>
+					<Setter Property="Background" Value="Silver"/>
+					<Setter Property="BorderBrush" Value="LightGray"/>
+					<Setter Property="BorderThickness" Value="1"/>
+				</Style>
+				<Style Selector="Button:pointerover /template/ContentPresenter">
+					<Setter Property="Background" Value="LightGray"/>
+					<Setter Property="BorderBrush" Value="Black"/>
+					<Setter Property="BorderThickness" Value="1"/>
+				</Style>
+			</StackPanel.Styles>
+		</StackPanel>
+		
+	</StackPanel>
+</Window>
+

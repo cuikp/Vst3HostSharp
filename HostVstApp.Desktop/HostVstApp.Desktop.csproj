@@ -1,0 +1,51 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <BuiltInComInteropSupport>true</BuiltInComInteropSupport>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+
+	  <PlatformTarget>AnyCPU</PlatformTarget>
+	  <Platforms>AnyCPU;x64</Platforms>
+
+	  <CFBundleVersion>1.0.0</CFBundleVersion>
+	  <CFBundleShortVersionString>1.0.0</CFBundleShortVersionString>
+	  <ImplicitUsings>enable</ImplicitUsings>
+
+	  <!--<CFBundleIconFile>Vst3ConnerIcon.icns</CFBundleIconFile>-->
+	  <AssemblyVersion>1.0.0.0</AssemblyVersion>
+	  <FileVersion>1.0.1.0</FileVersion>
+	  <Version>1.0.0</Version>
+	  	  
+	  <!--<ApplicationIcon>Assets\ConnerIcon.ico</ApplicationIcon>-->
+
+	  <RuntimeIdentifiers>osx-arm64;win-x64</RuntimeIdentifiers>
+	  
+  </PropertyGroup>
+
+
+	<PropertyGroup Condition="'$(RuntimeIdentifier)' == 'osx-arm64'">
+		<PlatformTarget>arm64</PlatformTarget>
+	</PropertyGroup>
+	
+	<PropertyGroup Condition="'$(RuntimeIdentifier)' == 'win-x64'">
+		<PlatformTarget>x64</PlatformTarget>
+	</PropertyGroup>
+
+	<!-- Default condition for Debug | AnyCPU -->
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<DefineConstants>$(DefineConstants);WINDOWS</DefineConstants>
+	</PropertyGroup>
+	
+	
+<ItemGroup>
+    <PackageReference Include="Avalonia.Desktop" Version="11.3.1" />
+    <PackageReference Include="Dotnet.Bundle" Version="0.9.13" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\HostVstApp\HostVstApp.csproj" />
+  </ItemGroup>
+
+</Project>

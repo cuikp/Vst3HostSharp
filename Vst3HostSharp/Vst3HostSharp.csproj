@@ -1,0 +1,51 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+		<PlatformTarget>AnyCPU</PlatformTarget>
+
+		<!-- NuGet package metadata -->
+		<PackageId>Vst3HostSharp</PackageId>
+		<Version>1.0.540-r</Version>
+		<Authors>cuip</Authors>
+		<Product>Vst3HostSharp</Product>
+		<Description>Host vst3 interaction for C#</Description>
+		<PackageTags>library;example</PackageTags>
+
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+
+	</PropertyGroup>
+
+
+	<ItemGroup>
+
+		<None Update="readme.md" Pack="true" PackagePath="\" />
+
+		<None Update="libs\Vst3Pont.dll" Pack="true">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+			<PackagePath>runtimes/win-x64/native/Vst3Pont.dll</PackagePath>
+		</None>
+
+		<None Update="libs\Vst3Pont.dylib" Pack="true">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+			<PackagePath>runtimes/osx/native/Vst3Pont.dylib</PackagePath>
+		</None>
+
+		<None Update="execs\ProbeVst3_mac" Pack="true" Link="ProbeVst3_mac">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+			<PackagePath>runtimes/osx/native/ProbeVst3_mac</PackagePath>
+		</None>
+
+		<None Update="execs\ProbeVst3_win.exe" Pack="true" Link="ProbeVst3_win.exe">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+			<PackagePath>runtimes/win-x64/native/ProbeVst3_win.exe</PackagePath>
+		</None>
+
+	</ItemGroup>
+
+
+
+</Project>
