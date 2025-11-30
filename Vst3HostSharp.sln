@@ -10,6 +10,9 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vst3HostSharp", "Vst3HostSharp\Vst3HostSharp.csproj", "{AB6649FA-1DFB-4019-B03E-326776E6B734}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5C604713-6563-48F8-9C26-E5F48DEEF759}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Vst3Pont", "Vst3Pont\Vst3Pont.vcxproj", "{67BF6C6D-46E8-3AB8-B2C9-BF1027ADD22A}"
 EndProject
